@@ -12,6 +12,11 @@ nbproject/private/
 build/
 dist/
 
+# eclipse config files
+.settings
+.classpath
+.project
+
 # generic files to ignore #
 *~
 *.lock
