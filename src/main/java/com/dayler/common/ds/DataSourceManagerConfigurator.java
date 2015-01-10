@@ -5,9 +5,9 @@ package com.dayler.common.ds;
 
 import java.sql.SQLException;
 
-import com.dayler.common.util.Parameters;
 import com.jolbox.bonecp.BoneCP;
 import com.jolbox.bonecp.BoneCPConfig;
+import com.dayler.common.util.Parameters;
 
 /**
  * @author asalazar

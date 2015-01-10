@@ -8,6 +8,8 @@ import java.util.Date;
  */
 public final class DateUtils {
 
+    private static final int CONVERSION_FACTOR_TO_DAYS = 86400000;
+
     public static long getNowTime() {
         return new Date().getTime();
     }
@@ -24,5 +26,14 @@ public final class DateUtils {
         }
 
         return new Date(timestamp.getTime());
+    }
+
+    /**
+     * 
+     * @param date Date to convert to days.
+     * @return date on its days representation.
+     */
+    public static long toDays(Date date) {
+        return date.getTime() / CONVERSION_FACTOR_TO_DAYS;
     }
 }

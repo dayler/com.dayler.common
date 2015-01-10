@@ -8,12 +8,10 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 import javax.swing.SwingUtilities;
 
@@ -54,7 +52,7 @@ class WorkerServiceImpl implements WorkerService {
             // do pre-execute
             worker.onPreExecute();
             // Schedule task to do on background
-            WorkerTask<P, R>task = new WorkerTask<>(worker, args);
+            WorkerTask<P, R>task = new WorkerTask<P, R>(worker, args);
             service.execute(task);
         } catch (OperationException ex) {
             worker.onError(ex, args);
@@ -65,7 +63,7 @@ class WorkerServiceImpl implements WorkerService {
     public <P, R> void executeAndWait(Worker<P, R> worker, Collection<P> args) {
         // On pre-execute
         Iterator<P>it = args.iterator();
-        List<CallableTask<P, R>>tasks = new ArrayList<>();
+        List<CallableTask<P, R>>tasks = new ArrayList<CallableTask<P, R>>();
         P param = null;
 
         while (it.hasNext()) {
@@ -88,7 +86,7 @@ class WorkerServiceImpl implements WorkerService {
                     worker.onError(ex, null);
                 }
             }
-        } catch (InterruptedException | ExecutionException | TimeoutException | OperationException ex) {
+        } catch (Throwable ex) {
             worker.onError(ex, param);
         }
     }

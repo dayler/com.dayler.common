@@ -11,8 +11,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.dayler.common.util.Parameters;
 import com.jolbox.bonecp.BoneCP;
+import com.dayler.common.util.Parameters;
 
 /**
  * @author asalazar

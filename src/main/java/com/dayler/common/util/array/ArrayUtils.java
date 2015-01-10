@@ -13,7 +13,6 @@ import java.util.List;
 public class ArrayUtils {
 
     @SuppressWarnings("unchecked")
-    @SafeVarargs
     public static <T> T[] toArray(T... args) {
         if (args == null) {
             return null;

@@ -1,7 +1,6 @@
 package com.dayler.common.log4j;
 
 import com.dayler.common.util.StringUtils;
-
 import org.apache.log4j.PatternLayout;
 
 import java.util.Date;

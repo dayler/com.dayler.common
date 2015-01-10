@@ -3,7 +3,6 @@ package com.dayler.common.jaxb.adapter;
 import com.dayler.common.util.date.DateFormatter;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
-
 import java.util.Date;
 
 /**

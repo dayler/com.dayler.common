@@ -116,7 +116,7 @@ public enum DateFormatter {
     }
 
     /**
-     * Format date time in its string representation.
+     * Format date time in its string representation. If the date is null returns empty string.
      *
      * @param date Date time to format.
      * @return String representation of the date time. Return 'empty string ' if the date time is null.

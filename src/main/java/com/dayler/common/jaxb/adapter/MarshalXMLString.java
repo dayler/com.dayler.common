@@ -5,7 +5,6 @@ import com.dayler.common.util.StringUtils;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-
 import java.io.ByteArrayOutputStream;
 
 /**

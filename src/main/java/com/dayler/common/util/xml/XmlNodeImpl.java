@@ -2,7 +2,6 @@ package com.dayler.common.util.xml;
 
 import com.dayler.common.util.Parameters;
 import com.dayler.common.util.StringUtils;
-
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -11,7 +10,6 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;

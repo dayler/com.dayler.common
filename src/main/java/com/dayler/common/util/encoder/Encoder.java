@@ -1,7 +1,6 @@
 package com.dayler.common.util.encoder;
 
 import com.dayler.common.util.Parameters;
-
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
